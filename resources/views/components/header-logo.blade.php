@@ -1,4 +1,13 @@
-<a href="/" {{ $attributes->merge(['class' => '-m-1.5 p-1.5']) }}>
-  <span class="sr-only">MBX</span>
-  <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
+<a href="/" {{ $attributes->merge([
+    'class' => 'p-4 bg-slate-800 text-white text-center',
+]) }}>
+    <div class="text-sm">Min by</div>
+
+    <div class="pt-1.5">
+        <div class="pt-0.5 bg-yellow-500"></div>
+    </div>
+
+    <div class="pt-1 text-xl">Aalborg</div>
+
+    {{ $slot }}
 </a>
