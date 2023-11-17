@@ -1,0 +1,11 @@
+module.exports = {
+    plugins: ["prettier-plugin-tailwindcss"],
+    overrides: [
+        {
+            files: "*.blade.php",
+            options: {
+                parser: "html"
+            }
+        }
+    ]
+};
