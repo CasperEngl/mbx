@@ -26,7 +26,7 @@
             <div class="pt-1 text-xs">Når intet andet er nært nok</div>
         </x-header-logo>
 
-        <div class="flex-1">
+        <div class="flex-1 lg:flex-none">
             <div class="hidden lg:flex lg:gap-x-12">
                 <x-nav-link href="#">Sign in</x-nav-link>
                 <x-nav-link href="#">Sign up</x-nav-link>
@@ -34,15 +34,14 @@
         </div>
     </nav>
 
-    <dialog id="mobile-menu" class="lg:hidden" aria-modal="true" _="on open call #mobile-menu-button.focus()
+    <dialog id="mobile-menu" class="lg:hidden" aria-modal="true" _="
+        on open call #mobile-menu-button.focus()
         on close call #menu-button.focus()
     ">
         <div class="fixed inset-0 flex min-h-full items-center justify-center p-4"
             _="on click if event.target == event.currentTarget call #mobile-menu.close()">
-            >
-            <div class="fixed inset-y-0 left-0 z-10 w-full max-w-xs overflow-y-auto bg-white px-6 py-6">
-
-                <div class="grid grid-cols-3 items-center">
+            <div class="fixed inset-y-0 left-0 z-10 w-full max-w-xs overflow-y-auto bg-white pt-4 px-6">
+                <div class="grid grid-cols-6 items-center">
                     <div>
                         <button #mobile-menu-button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700"
                             _="on click call #mobile-menu.close()">
@@ -54,8 +53,8 @@
                         </button>
                     </div>
 
-                    <div class="flex justify-center">
-                        <x-header-logo class="rounded-lg"></x-header-logo>
+                    <div class="flex col-span-4">
+                        <x-header-logo class="inline-block w-full rounded-lg"></x-header-logo>
                     </div>
                 </div>
 
